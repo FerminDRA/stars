@@ -42,3 +42,5 @@ jobs:
         fail_on_empty: false
     - name: show .env file
       run: cat .env
+    - name: Run Tests
+      run: python manage.py test --settings=settings.local -v 3 --keepdb
