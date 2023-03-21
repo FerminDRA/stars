@@ -62,3 +62,5 @@ class CreateEstrella(graphene.Mutation):
 
 class Mutation(graphene.ObjectType):
     create_estrella = CreateEstrella.Field()
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
