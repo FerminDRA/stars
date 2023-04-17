@@ -50,6 +50,6 @@ jobs:
     - name: Deploy
       uses: okteto/pipeline@2.7.0
       with:
-          name: adsoftsito # cambiar por su namespace
+          name: fermindra # cambiar por su namespace
           timeout: 5m
 
