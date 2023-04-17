@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: fermindra-config
+ labels:
+   app: postgres
+data:
+ PROD_SECRET_KEY: itsumo-nandemo
+ PROD_DATABASE: jowbzveu
+ PROD_USER: jowbzveu
+ PROD_PASSWORD: Tpkh_tPPX8rdAJcL1k90v3C71MHEgb8E
+ PROD_HOST: hansken.db.elephantsql.com
+ PROD_PORT: "5432"
