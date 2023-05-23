@@ -43,7 +43,7 @@ class CreateEstrella(graphene.Mutation):
         color = graphene.String()
 
     def mutate(self, info, nombre, distancia, radio, rotacion, edad, ubicacion, masa, temperatura, constelacion, color):
-        estrella = Estrella(nombre=nombre, distancia=distancia, radio=radio, rotacion=rotacion, edad=edad, ubicacion=ubicacion,temperatura=temperatura, constelacion=constelacion, color=color)
+        estrella = Estrella(nombre=nombre, distancia=distancia, radio=radio, rotacion=rotacion, edad=edad, ubicacion=ubicacion, masa=masa,temperatura=temperatura, constelacion=constelacion, color=color)
         estrella.save()
 
         return CreateEstrella(
