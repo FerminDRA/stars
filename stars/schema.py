@@ -1,13 +1,18 @@
 import graphene
 
 import estrellas.schema
+import users.schema
+import graphql_jwt
 
 
-class Query(estrellas.schema.Query, graphene.ObjectType):
+
+class Query(users.schema.Query,estrellas.schema.Query, graphene.ObjectType):
     pass
 
-class Mutation(estrellas.schema.Mutation, graphene.ObjectType):
-    pass
+class Mutation(users.schema.Mutation,estrellas.schema.Mutation, graphene.ObjectType):
+    token_auth = graphql_jwt.ObtainJSONWebToken.Field()
+    verify_token = graphql_jwt.Verify.Field()
+    refresh_token = graphql_jwt.Refresh.Field()
 
-schema = graphene.Schema(query=Query)
+
 schema = graphene.Schema(query=Query, mutation=Mutation)
