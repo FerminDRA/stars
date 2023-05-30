@@ -10,7 +10,7 @@ data:
  DEV_USER: meylwxuk
  DEV_PASSWORD: NsLgTK6Ae3eGdhn9w9QMAPU2p9vRJPo7
  DEV_HOST: hansken.db.elephantsql.com 
- DEV_PORT: "5432
+ DEV_PORT: "5432"
  PROD_SECRET_KEY: itsumo-nandemo
  PROD_DATABASE: jowbzveu
  PROD_USER: jowbzveu
