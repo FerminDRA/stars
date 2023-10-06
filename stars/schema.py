@@ -1,13 +1,13 @@
 import graphene
 
 import estrellas.schema
+import users.schema
 
 
-class Query(estrellas.schema.Query, graphene.ObjectType):
+class Query(estrellas.schema.Query,users.schema.Query, graphene.ObjectType):
     pass
 
-class Mutation(estrellas.schema.Mutation, graphene.ObjectType):
+class Mutation(estrellas.schema.Mutation,users.schema.Mutation, graphene.ObjectType):
     pass
 
-schema = graphene.Schema(query=Query)
 schema = graphene.Schema(query=Query, mutation=Mutation)
